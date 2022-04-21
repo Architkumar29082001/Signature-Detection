@@ -20,7 +20,7 @@ try:
     print("3)GATE")
     Exam_type = input()
     if Exam_type == "JEE":
-        if roundsize < 30 and roundsize>4:
+        if roundsize < 40 and roundsize>4:
             print("The file submitted succesfully ")
 
         else:
@@ -30,7 +30,7 @@ try:
             x, y = foo.size
             x2, y2 = math.floor(x - 600), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed Photo\image_scaled2.jpg", quality=95)
+            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
 
     elif Exam_type == "VITEEE":
@@ -42,9 +42,9 @@ try:
             print("File size is to large, Compressing the file under 10Kb to 200Kb ")
             foo = Image.open(IMAGE_PATH)
             x, y = foo.size
-            x2, y2 = math.floor(x - 600), math.floor(y - 1250)
+            x2, y2 = math.floor(x - 600), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed Photo\image_scaled2.jpg", quality=95)
+            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
     elif Exam_type == "GATE":
         if roundsize < 200 and roundsize>10:
@@ -56,7 +56,7 @@ try:
             x, y = foo.size
             x2, y2 = math.floor(x - 600), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed Photo\image_scaled2.jpg", quality=95)
+            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
     else:
         print("Enter Valid Exam name ")
