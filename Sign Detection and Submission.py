@@ -1,7 +1,5 @@
 import easyocr
 import cv2
-from matplotlib import pyplot as plt
-import numpy as np
 import os
 from PIL import Image
 import math
@@ -20,7 +18,7 @@ try:
     print("3)GATE")
     Exam_type = input()
     if Exam_type == "JEE":
-        if roundsize < 40 and roundsize>4:
+        if roundsize < 30 and roundsize>4:
             print("The file submitted succesfully ")
 
         else:
@@ -28,9 +26,9 @@ try:
             print("File size is to large, Compressing the file  under 4Kb to 30Kb ")
             foo = Image.open(IMAGE_PATH)
             x, y = foo.size
-            x2, y2 = math.floor(x - 600), math.floor(y - 1100)
+            x2, y2 = math.floor(x - 700), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
+            foo.save("/content/drive/MyDrive/Compressed file/image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
 
     elif Exam_type == "VITEEE":
@@ -44,7 +42,7 @@ try:
             x, y = foo.size
             x2, y2 = math.floor(x - 600), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
+            foo.save("/content/drive/MyDrive/Compressed file/image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
     elif Exam_type == "GATE":
         if roundsize < 200 and roundsize>10:
@@ -56,7 +54,7 @@ try:
             x, y = foo.size
             x2, y2 = math.floor(x - 600), math.floor(y - 1100)
             foo = foo.resize((x2, y2), Image.ANTIALIAS)
-            foo.save("D:\coding\OCR testing\Compressed sign\image_scaled2.jpg", quality=95)
+            foo.save("/content/drive/MyDrive/Compressed file/image_scaled2.jpg", quality=95)
             print("File Compressed and Submitted succesfully")
     else:
         print("Enter Valid Exam name ")
@@ -65,11 +63,3 @@ except Exception as e:
         print("Image")
     else:
         print(e)
-
-
-
-
-
-
-
-
